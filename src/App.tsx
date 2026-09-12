@@ -1,11 +1,16 @@
+import Banner from "./components/Banner"
+import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
+import Technologies from "./components/Technology/Technologies"
 
 function App() {
 
   return (
     <>
     <Navbar/>
-      <h1 className="bg-amber-300">Welcome to DevStack</h1>
+    <Banner/>
+    <Technologies/>
+    <Footer/>
     </>
   )
 }
