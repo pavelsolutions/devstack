@@ -2,6 +2,7 @@ import TechnologyCard from "./TechnologyCard";
 import DevStack from "./DevStack";
 import type { ITechnology } from "../../types/technology";
 import { use, useState } from "react";
+import { Bounce, toast, ToastContainer } from "react-toastify";
 
 interface TechnologiesProps {
   technologiesPromise: Promise<ITechnology[]>;
@@ -15,17 +16,19 @@ const Technologies = ({ technologiesPromise }: TechnologiesProps) => {
 
   const handleSelectedStack = (selectedTechnology: ITechnology) => {
     if (selectedStack.includes(selectedTechnology)) {
-      // const selectStack = selectedStack.filter((stack) => stack.id !== selectedTechnology.id);
-      // setSelectedStack(selectStack);
-      return;
+      toast.warning(`${selectedTechnology.name} stack already added`);
     } else {
       setSelectedStack([...selectedStack, selectedTechnology])
+      toast.success(`${selectedTechnology.name} stack added successfully`);
     }
   }
 
   const handleRemoveSelectedStack = (revomveStack: ITechnology) => {
     const selectStack = selectedStack.filter((stack) => stack.id !== revomveStack.id);
     setSelectedStack(selectStack);
+
+
+    toast.info(`${revomveStack.name} removed from your stack!`);
   }
 
   return (

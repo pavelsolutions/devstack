@@ -4,6 +4,7 @@ import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
 import Technologies from "./components/Technology/Technologies"
 import type { ITechnology } from "./types/technology"
+import { Bounce, ToastContainer } from "react-toastify"
 
 const technologyFetch = async (): Promise<ITechnology[]> => {
   const response = await fetch('/data.json');
@@ -22,7 +23,26 @@ function App() {
         <Technologies technologiesPromise={technologiesPromise} />
       </Suspense>
       <Footer />
+
+      {/* <ToastContainer /> */}
+
+    <ToastContainer
+      position="top-right"
+      autoClose={1000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick={false}
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="light"
+      transition={Bounce}
+    />
+      
     </>
+
+    
   )
 }
 
