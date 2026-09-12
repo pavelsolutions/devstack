@@ -1,11 +1,19 @@
 import TechnologyCard from "./TechnologyCard";
 import DevStack from "./DevStack";
+import type { ITechnology } from "../../types/technology";
+import { use } from "react";
 
-const Technologies = () => {
+interface TechnologiesProps {
+  technologiesPromise: Promise<ITechnology[]>;
+}
+
+const Technologies = ({ technologiesPromise }: TechnologiesProps) => {
+  const technologies = use(technologiesPromise);
+  console.log(technologies);
+
   return (
     <section className="bg-white font-jakarta">
       <div className="mx-auto w-full max-w-304 px-4">
-        {/* Heading */}
         <div className="mb-10">
           <h1 className="text-4xl font-bold text-[#0F172A] text-[24px] text-center lg:text-left lg:text-5xl">
             Explore the{" "}
@@ -18,20 +26,12 @@ const Technologies = () => {
             Pick one technology per category to build your ideal stack.
           </p>
         </div>
-
-        {/* Main Layout */}
         <div className="flex flex-col gap-8 xl:flex-row">
-          {/* Technology Cards */}
+          {/* Technology Card */}
           <div className="w-full xl:w-228 grid flex-1 grid-cols-1 justify-items-center gap-6 md:grid-cols-2 lg:grid-cols-3">
-
-            <TechnologyCard />
-            <TechnologyCard />
-            <TechnologyCard />
-
-            <TechnologyCard />
-            <TechnologyCard />
-            <TechnologyCard />
-
+            {
+              technologies.map((technology)=><TechnologyCard key={technology.id} technology={technology} />)
+            }
           </div>
           {/* Dev Stack Sidebar */}
           <aside className="w-full xl:w-76">

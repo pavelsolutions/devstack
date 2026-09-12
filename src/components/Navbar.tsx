@@ -4,9 +4,7 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="navbar mx-auto w-full max-w-304 px-4 font-jakarta text-sm">
-        {/* Navbar Start */}
         <div className="navbar-start">
-          {/* Mobile Menu */}
           <div className="dropdown">
             <div
               tabIndex={0}
@@ -41,14 +39,11 @@ const Navbar = () => {
               <li><a>Contact</a></li>
             </ul>
           </div>
-
-          {/* Logo */}
           <a className="">
             <img src={Logo} alt="DevStack" />
           </a>
 
         </div>
-        {/* Desktop Menu */}
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 [&_a:hover]:bg-transparent">
             <li><a>Home</a></li>
@@ -58,7 +53,6 @@ const Navbar = () => {
             <li><a>Contact</a></li>
           </ul>
         </div>
-        {/* Navbar End */}
         <div className="navbar-end flex items-center gap-5">
           <a className="cursor-pointer text-[#0F172A] hover:text-[#D91B7E]">
             Sign In

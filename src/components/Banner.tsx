@@ -4,12 +4,10 @@ const Banner = () => {
   return (
     <section className="min-h-screen bg-white font-jakarta">
       <div className="mx-auto flex w-full max-w-304 flex-col items-center gap-8 px-4 py-16 lg:flex-row">
-        {/* Left Content */}
         <div className="w-full lg:w-174">
           <h1 className="font-inter text-5xl font-bold leading-tight text-[#0F172A] text-[30px] text-center lg:text-left lg:text-6xl">
             Build Your Ideal
             <br />
-
             <span className="bg-linear-to-r from-[#FF6A1A] via-[#D91B7E] to-[#6D4CFF] bg-clip-text text-transparent">
               Development Stack
             </span>
@@ -22,23 +20,15 @@ const Banner = () => {
             <br className="hidden lg:block" />
             next project.
           </p>
-
-          {/* Buttons */}
           <div className="flex flex-wrap gap-3 text-sm">
-
             <button className="btn rounded-lg border-none bg-linear-to-r from-[#FF6B1A] to-[#D91B7E] px-6 text-base font-semibold text-white shadow-none hover:from-[#FF6B1A] hover:to-[#D91B7E]">
               Explore Technologies
             </button>
-
             <button className="btn btn-outline rounded-lg px-6">
               Learn More
             </button>
-
           </div>
-
         </div>
-
-        {/* Right Image */}
         <div className="w-full lg:w-122">
           <img
             alt="Development Stack"
