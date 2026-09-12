@@ -1,10 +1,14 @@
 import type { ITechnology } from "../../types/technology";
 
 interface TechnologyCardProps {
-  technology:ITechnology,
+  technology: ITechnology,
+  isSelected:boolean,
+  handleSelectedStack: (technology: ITechnology)=> void
 }
 
-const TechnologyCard = ({technology} : TechnologyCardProps) => {
+const TechnologyCard = ({ technology, isSelected, handleSelectedStack }: TechnologyCardProps) => {
+
+
   return (
     <div className="w-full max-w-[320px] rounded-3xl border border-[#E5E7EB] bg-white p-5 shadow-sm">
       <div className="flex items-start justify-between">
@@ -39,10 +43,22 @@ const TechnologyCard = ({technology} : TechnologyCardProps) => {
           {technology.rating}
         </span>
       </div>
-      <button className="mt-5 w-full rounded-xl bg-[#111827] py-3 text-sm font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
-        Add to Stack
-      </button>
+      {/* {isSelected ? <button onClick={handleIsSelectedStack} className="mt-5 w-full rounded-xl bg-[#F8F5F7] py-3 text-sm font-semibold text-[#C95A7B] transition-all duration-300">
+        ✓ Added to Stack
+      </button> :
+        <button onClick={handleIsSelectedStack} className="mt-5 w-full rounded-xl bg-[#111827] py-3 text-sm font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
+          Add to Stack
+        </button>
+      } */}
 
+      <button
+        onClick={()=>handleSelectedStack(technology)}
+        className={`mt-5 w-full rounded-xl py-3 text-sm font-semibold transition-all duration-300
+          ${isSelected? "bg-[#F8F5F7] text-[#C95A7B]" : "bg-[#111827] text-white hover:scale-[1.02] hover:shadow-lg cursor-pointer"}`
+        }
+      >
+        {isSelected ? "✓ Added to Stack" : "Add to Stack"}
+      </button>
     </div>
   );
 };
