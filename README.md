@@ -31,7 +31,7 @@ Users can explore different technologies, view their details, and add their favo
 
 ## 🔗 Project Links
 
-- 🌐 Live Demo: https://your-live-site-url.com
+- 🌐 Live Demo: https://ph-devstack-explorer.netlify.app/
 - 💻 GitHub Repository: https://github.com/pavelsolutions/devstack
 
 ---
