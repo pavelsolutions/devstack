@@ -10,7 +10,9 @@ const TechnologyCard = ({ technology, isSelected, handleSelectedStack }: Technol
 
 
   return (
-    <div className="w-full max-w-[320px] rounded-3xl border border-[#E5E7EB] bg-white p-5 shadow-sm">
+    // <div className="w-full max-w-[320px] rounded-3xl border border-[#E5E7EB] bg-white p-5 shadow-sm">
+    <div className=
+    {`"w-full max-w-[320px] rounded-3xl border ${isSelected ? "border-[#C95A7B]" : "border-[#E5E7EB]"} bg-white p-5 shadow-sm"`}>
       <div className="flex items-start justify-between">
         <img
           src={technology.icon}

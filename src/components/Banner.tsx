@@ -23,7 +23,7 @@ const Banner = () => {
             <br className="hidden lg:block" />
             next project.
           </p>
-          <div className="flex flex-wrap gap-3 text-sm">
+          <div className="flex flex-wrap justify-center gap-3 text-sm lg:justify-start">
             {/* <button className="btn rounded-lg border-none bg-linear-to-r from-[#FF6B1A] to-[#D91B7E] px-6 text-base font-semibold text-white shadow-none hover:from-[#FF6B1A] hover:to-[#D91B7E]">
               Explore Technologies
             </button> */}

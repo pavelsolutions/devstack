@@ -2,7 +2,7 @@ import TechnologyCard from "./TechnologyCard";
 import DevStack from "./DevStack";
 import type { ITechnology } from "../../types/technology";
 import { use, useState } from "react";
-import { Bounce, toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 
 interface TechnologiesProps {
   technologiesPromise: Promise<ITechnology[]>;
@@ -91,7 +91,7 @@ const Technologies = ({ technologiesPromise }: TechnologiesProps) => {
                 selectedStack.length === 0 ? (
 
                   <div className="mt-6 flex h-20 items-center justify-center rounded-2xl border-2 border-dashed border-[#E2E8F0] bg-[#FAFAFA]">
-                    <p className="text-lg font-medium text-[#94A3B8]">
+                    <p className="text-md font-medium text-[#94A3B8]">
                       Your stack is empty.
                     </p>
                   </div>
