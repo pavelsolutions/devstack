@@ -8,7 +8,10 @@ const Banner = () => {
           <h1 className="font-inter text-5xl font-bold leading-tight text-[#0F172A] text-[30px] text-center lg:text-left lg:text-6xl">
             Build Your Ideal
             <br />
-            <span className="bg-linear-to-r from-[#FF6A1A] via-[#D91B7E] to-[#6D4CFF] bg-clip-text text-transparent">
+            {/* <span className="bg-linear-to-r from-[#FF6A1A] via-[#D91B7E] to-[#6D4CFF] bg-clip-text text-transparent">
+              Development Stack
+            </span> */}
+            <span className="brand-gradient-text">
               Development Stack
             </span>
           </h1>
@@ -21,10 +24,13 @@ const Banner = () => {
             next project.
           </p>
           <div className="flex flex-wrap gap-3 text-sm">
-            <button className="btn rounded-lg border-none bg-linear-to-r from-[#FF6B1A] to-[#D91B7E] px-6 text-base font-semibold text-white shadow-none hover:from-[#FF6B1A] hover:to-[#D91B7E]">
+            {/* <button className="btn rounded-lg border-none bg-linear-to-r from-[#FF6B1A] to-[#D91B7E] px-6 text-base font-semibold text-white shadow-none hover:from-[#FF6B1A] hover:to-[#D91B7E]">
+              Explore Technologies
+            </button> */}
+            <button className="brand-gradient rounded-xl px-6 py-3 font-semibold text-white transition hover:scale-105">
               Explore Technologies
             </button>
-            <button className="btn btn-outline rounded-lg px-6">
+            <button className="btn btn-outline rounded-lg px-6 transition hover:scale-105">
               Learn More
             </button>
           </div>
@@ -33,7 +39,8 @@ const Banner = () => {
           <img
             alt="Development Stack"
             src={BannerImg}
-            className="w-full rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            className="w-full rounded-lg transition-all duration-300 hover:scale-105"
+          // className="w-full rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl"
           />
         </div>
       </div>

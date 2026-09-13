@@ -27,8 +27,12 @@ const Technologies = ({ technologiesPromise }: TechnologiesProps) => {
     const selectStack = selectedStack.filter((stack) => stack.id !== revomveStack.id);
     setSelectedStack(selectStack);
 
-
     toast.info(`${revomveStack.name} removed from your stack!`);
+  }
+
+  const handleRemoveAllStack = () => {
+    setSelectedStack([])
+    toast.warning(`Removed all from your stack!`);
   }
 
   return (
@@ -37,7 +41,10 @@ const Technologies = ({ technologiesPromise }: TechnologiesProps) => {
         <div className="mb-10">
           <h1 className="text-4xl font-bold text-[#0F172A] text-[24px] text-center lg:text-left lg:text-5xl">
             Explore the{" "}
-            <span className="bg-linear-to-r from-[#FF6A1A] via-[#D91B7E] to-[#7C3AED] bg-clip-text text-transparent">
+            {/* <span className="bg-linear-to-r from-[#FF6A1A] via-[#D91B7E] to-[#7C3AED] bg-clip-text text-transparent">
+              Technologies
+            </span> */}
+            <span className="brand-gradient-text">
               Technologies
             </span>
           </h1>
@@ -45,7 +52,6 @@ const Technologies = ({ technologiesPromise }: TechnologiesProps) => {
             Pick one technology per category to build your ideal stack.
           </p>
         </div>
-        <h1>Total Stack: {selectedStack.length}</h1>
         <div className="flex flex-col gap-8 xl:flex-row">
           {/* Technology Card */}
           <div className="w-full xl:w-228 grid flex-1 grid-cols-1 justify-items-center gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -93,8 +99,8 @@ const Technologies = ({ technologiesPromise }: TechnologiesProps) => {
                 ) : (
 
                   <button
-                    onClick={() => setSelectedStack([])}
-                    className="mt-12 w-full cursor-pointer rounded-lg border border-[#FECACA] bg-white py-2 text-sm font-semibold text-[#C2413B] transition hover:bg-[#FFF5F5]"
+                    onClick={handleRemoveAllStack}
+                    className="mt-12 w-full cursor-pointer rounded-lg border border-[#C2413B] bg-white py-2 text-sm font-semibold text-[#C2413B] transition hover:bg-[#FFF5F5]"
                   >
                     Remove All
                   </button>

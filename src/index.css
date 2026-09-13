@@ -5,4 +5,30 @@
 @theme {
   --font-jakarta: "Plus Jakarta Sans", sans-serif;
   --font-inter: "Inter", sans-serif;
+
+  --color-brand-orange: #ff6a1a;
+  --color-brand-pink: #d91b7e;
+  --color-brand-violet: #7c3aed;
 }
+
+@utility brand-gradient {
+  background-image: linear-gradient(
+    to right,
+    var(--color-brand-orange),
+    var(--color-brand-pink),
+    var(--color-brand-violet)
+  );
+}
+
+@utility brand-gradient-text {
+  background-image: linear-gradient(
+    to right,
+    var(--color-brand-orange),
+    var(--color-brand-pink),
+    var(--color-brand-violet)
+  );
+
+  background-clip: text;
+  color: transparent;
+}
+

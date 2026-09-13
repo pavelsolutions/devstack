@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar"
 import Technologies from "./components/Technology/Technologies"
 import type { ITechnology } from "./types/technology"
 import { Bounce, ToastContainer } from "react-toastify"
+import LoadingSpinner from "./components/LoadingSpinner"
 
 const technologyFetch = async (): Promise<ITechnology[]> => {
   const response = await fetch('/data.json');
@@ -19,7 +20,7 @@ function App() {
     <>
       <Navbar />
       <Banner />
-      <Suspense fallback={<h1>Loading........</h1>}>
+      <Suspense fallback={<LoadingSpinner />}>
         <Technologies technologiesPromise={technologiesPromise} />
       </Suspense>
       <Footer />
