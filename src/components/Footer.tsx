@@ -13,14 +13,14 @@ const Footer = () => {
                             modern software.
                         </p>
 
-                        <div className="flex gap-5 text-[#475569]">
-                            <a className="cursor-pointer link-hover">GitHub</a>
-                            <a className="cursor-pointer link-hover">Twitter</a>
-                            <a className="cursor-pointer link-hover">LinkedIn</a>
+                        <div className="flex gap-5 text-[#0F172A]">
+                            <a className="cursor-pointer">GitHub</a>
+                            <a className="cursor-pointer">Twitter</a>
+                            <a className="cursor-pointer">LinkedIn</a>
                         </div>
                     </aside>
                     <nav className="[&_a]:text-[#64748B] max-md:hidden">
-                        <h6 className="footer-title text-[#0F172A]">
+                        <h6 className="font-bold text-[#0F172A] uppercase">
                             Product
                         </h6>
                         <a className="link link-hover">Home</a>
@@ -28,7 +28,7 @@ const Footer = () => {
                         <a className="link link-hover">Projects</a>
                     </nav>
                     <nav className="[&_a]:text-[#64748B] max-md:hidden">
-                        <h6 className="footer-title text-[#0F172A]">
+                        <h6 className="font-bold text-[#0F172A] uppercase">
                             Company
                         </h6>
                         <a className="link link-hover">About us</a>
@@ -36,11 +36,11 @@ const Footer = () => {
                         <a className="link link-hover">Careers</a>
                     </nav>
                     <nav className="[&_a]:text-[#64748B] max-md:hidden">
-                        <h6 className="footer-title text-[#0F172A]">
+                        <h6 className="font-bold text-[#0F172A] uppercase">
                             Legal
                         </h6>
                         <a className="link link-hover">Privacy policy</a>
-                        <a className="link link-hover">Terms of use</a>
+                        <a className="link link-hover">Terms of Service</a>
                     </nav>
                 </div>
 

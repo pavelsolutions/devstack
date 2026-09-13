@@ -30,7 +30,7 @@ const Banner = () => {
             <button className="brand-gradient rounded-xl px-6 py-3 font-semibold text-white transition hover:scale-105">
               Explore Technologies
             </button>
-            <button className="btn btn-outline rounded-lg px-6 transition hover:scale-105">
+            <button className="btn btn-outline border-[#E5E7EB] text-[#374151] rounded-lg px-6 transition hover:scale-105">
               Learn More
             </button>
           </div>
